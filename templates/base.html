@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <section>
+
+    {% include "includes/sidebar.html" %}
+    <div class="content">
+      {% block content %}
+      <h1>Darshboard</h1>
+      <h2>Welcome <span class="text-danger">{{ request.user.username }}</span></h2>
+      {% endblock content %}
+    </div>
+  </section>
+
+  <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/modal.js' %}"></script>
+
+</body>
+
+</html>

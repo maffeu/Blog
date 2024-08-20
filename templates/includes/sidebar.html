@@ -1,0 +1,17 @@
+<div class="sidebar bg-dark text-light">
+    <h1>logo</h1>
+    <div id="line"></div>
+    <ul>
+        <li><a href="{% url 'home' %}"><i class="fa fa-dashboard"></i>Darshboard</a></li>
+        <li><a href="{% url 'postList' %}"><i class="fa fa-home"></i>Posts</a></li>
+        <li><a href=""><i class="fa fa-book"></i>Orders</a></li>
+        <li><a href=""><i class="fa fa-list"></i>Products</a></li>
+        <li><a href=""><i class="fa fa-users"></i>Customers</a></li>
+
+        {% if user.is_authenticated %}
+            <li class="bg-danger" ><a href="{% url 'logout' %}"><i class="fa fa-users"></i>Logout</a></li>
+        {% else %}
+            <li class="bg-primary" ><a href="{% url 'login' %}"><i class="fa fa-users"></i>Login</a></li>
+        {% endif %}
+    </ul>
+</div>

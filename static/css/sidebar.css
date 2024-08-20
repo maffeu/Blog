@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* sidebar */
+
+.sidebar{
+    padding: 1.5rem;
+}
+
+#line{
+    height: 2px;
+    background-color: grey;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.sidebar ul li:hover{
+    background-color: rgb(3, 190, 252);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+#logout-button{
+    background-color: rgb(156, 0, 0);
+}

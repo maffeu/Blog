@@ -1,0 +1,26 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    {% load crispy_forms_tags %}
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="login-form">
+        <h1>Login</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <div class="btn btn-primary">submit</div>
+    </form>
+    </div>
+     
+   
+</body>
+</html>
